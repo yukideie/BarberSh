@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarberShop", "BarberShop\BarberShop.csproj", "{8097B78F-A155-4AFC-A4EF-02102DAC6083}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8097B78F-A155-4AFC-A4EF-02102DAC6083}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8097B78F-A155-4AFC-A4EF-02102DAC6083}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8097B78F-A155-4AFC-A4EF-02102DAC6083}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8097B78F-A155-4AFC-A4EF-02102DAC6083}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5F93A2C1-D31B-48B7-8EC5-D5A704E05EB1}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,53 @@
+﻿<Window x:Class="BarberShop.Windows.ClientWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BarberShop.Windows"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="ClientWindow" Height="700" Width="600">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF9D66CE" Offset="0"/>
+                <GradientStop Color="#FFDF8787" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="10*"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Список клиентов"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="30"/>
+        <WrapPanel Grid.Row="1" VerticalAlignment="Center">
+            <TextBlock Text="Поиск"
+                       FontSize="18"
+                       Margin="10 0"/>
+            <TextBox x:Name="tbSearch"
+                     FontSize="15"
+                     Width="200"
+                     TextChanged="tbSearch_TextChanged" />
+            <ComboBox x:Name="cbSort"
+                      FontSize="18"
+                      Width="170"
+                      Margin="10 0"
+                      SelectionChanged="cbSort_SelectionChanged"/>
+        </WrapPanel>
+        <DataGrid Grid.Row="3" x:Name="dgClient" AutoGenerateColumns="False" Background="{x:Null}" KeyUp="dgClient_KeyUp">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Id" Width="30" Binding="{Binding IdClient}"/>
+                <DataGridTextColumn Header="Имя" Width="1*" Binding="{Binding FName}"/>
+                <DataGridTextColumn Header="Фамилия" Width="1*" Binding="{Binding LName}"/>
+                <DataGridTextColumn Header="Телефон" Width="1*" Binding="{Binding Phone}"/>
+                <DataGridTextColumn Header="Почта" Width="1*" Binding="{Binding Email}"/>
+                <DataGridTextColumn Header="Пол" Width="1*" Binding="{Binding Gender.NameOfGender}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
